@@ -2,6 +2,9 @@ package com.security.login.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api")
 public class RestApiController {
@@ -13,10 +16,13 @@ public class RestApiController {
     }
 
     @PostMapping(value={"/post"})
-    public @ResponseBody String goPost(){
+    public @ResponseBody String goPost( HttpServletResponse bodyData ){
         System.out.println("/post - 컨트롤러 ");
+        System.out.println("bodyData = "+bodyData);
         return "<h1>Post<h1>";
     }
+
+
 
 
 }
