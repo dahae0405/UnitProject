@@ -8,6 +8,10 @@ server:
       force: true
 
 spring:
+  # override 활성
+  main:
+    allow-bean-definition-overriding: true
+
   # driver - connect client
   h2:
     console:
@@ -16,10 +20,11 @@ spring:
   # driver
   datasource:
     hikari:
-      #jdbc-url: # ? ? ?
+      jdbc-url: jdbc:h2:mem:testdb
       driver-class-name: org.h2.Driver
       username: sa
       password:
+
     continue-on-error: true
 
   # spring Data JPA
