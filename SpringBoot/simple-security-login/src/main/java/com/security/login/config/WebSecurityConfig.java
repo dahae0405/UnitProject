@@ -10,9 +10,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  *      ㄴ B. 시큐리티가 H2콘솔을 클라이언트 웹브라우저에서 보도록 허용.
  *
  * */
-@Configuration      // A1. SpringData로 올리겠다.
+@Configuration      // A1. Spring에서 관리할 수 있게 Annotation걸기 ( Spring Data로 선언 )
 @EnableWebSecurity  // A2. 시큐리티 사용하겠다.
-class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     // A3. 시큐리티 커스텀 - WebSecurityConfigurerAdapter를 받아 사용했더니, 시큐리티가 가로채지않는다.

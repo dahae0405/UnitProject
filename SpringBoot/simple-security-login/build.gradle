@@ -25,12 +25,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'com.h2database:h2'
+    implementation 'com.h2database:h2' // h2 내부객체 사용하기위해 runtimeOnly -> implementation 으로 변경.
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     // 추가
     implementation group: 'com.auth0', name: 'java-jwt', version: '3.10.2'
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.1.0' // 히카리방식 서버
+
+
+
 }
 
 test {
