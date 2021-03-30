@@ -22,7 +22,7 @@ spring:
   jpa:
     database-platform: H2
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
